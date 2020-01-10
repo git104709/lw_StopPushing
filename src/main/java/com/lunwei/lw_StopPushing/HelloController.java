@@ -7,6 +7,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -21,9 +22,11 @@ public class HelloController {
 
     @RequestMapping("list")
     @Scheduled(cron = "*/5 * * * * ?")
+    @ResponseBody
     public Object list(){
-        System.out.println(123);
-        return 123;
+        User user = userService.list();
+            System.out.println(user);
+        return user;
     }
 
 }

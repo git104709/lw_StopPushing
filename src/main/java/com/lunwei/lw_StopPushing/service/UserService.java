@@ -9,4 +9,6 @@ public interface UserService {
     public User selectByPrimaryKey(Integer i);
 
     List<User> getList();
+
+    User list();
 }

@@ -73,6 +73,9 @@
       age = #{age,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="list" resultType="com.lunwei.lw_StopPushing.model.User">
+    select * from user where name=123
+  </select>
 
 </mapper>
 

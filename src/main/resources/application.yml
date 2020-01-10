@@ -12,9 +12,9 @@ spring:
       filters: stat
       driver-class-name: com.mysql.cj.jdbc.Driver
       #基本属性
-      url: jdbc:mysql://127.0.0.1:3306/lunwei?serverTimezone=UTC
+      url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC
       username: root
-      password: root
+      password:
 
 mybatis:
         mapper-locations: classpath:mapper/*.xml
