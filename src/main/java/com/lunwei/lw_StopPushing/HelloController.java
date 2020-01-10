@@ -29,4 +29,10 @@ public class HelloController {
         return user;
     }
 
+    @RequestMapping("/getUser")
+    public User getUser(){
+        User user = userService.selectByPrimaryKey(1);
+        return user;
+    }
+
 }
