@@ -1,4 +1,4 @@
-package com.test.lw_StopPushing.model;
+package com.lunwei.lw_StopPushing.model;
 
 public class User {
     private Integer id;

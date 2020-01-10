@@ -1,7 +1,7 @@
-package com.test.lw_StopPushing;
+package com.lunwei.lw_StopPushing;
 
-import com.test.lw_StopPushing.model.User;
-import com.test.lw_StopPushing.service.UserService;
+import com.lunwei.lw_StopPushing.model.User;
+import com.lunwei.lw_StopPushing.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

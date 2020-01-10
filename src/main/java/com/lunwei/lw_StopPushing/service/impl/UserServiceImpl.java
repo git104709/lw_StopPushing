@@ -1,8 +1,8 @@
-package com.test.lw_StopPushing.service.impl;
+package com.lunwei.lw_StopPushing.service.impl;
 
-import com.test.lw_StopPushing.mapper.UserMapper;
-import com.test.lw_StopPushing.model.User;
-import com.test.lw_StopPushing.service.UserService;
+import com.lunwei.lw_StopPushing.service.UserService;
+import com.lunwei.lw_StopPushing.mapper.UserMapper;
+import com.lunwei.lw_StopPushing.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

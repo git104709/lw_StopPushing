@@ -1,6 +1,6 @@
-package com.test.lw_StopPushing.mapper;
+package com.lunwei.lw_StopPushing.mapper;
 
-import com.test.lw_StopPushing.model.User;
+import com.lunwei.lw_StopPushing.model.User;
 
 import java.util.List;
 

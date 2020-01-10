@@ -1,6 +1,6 @@
-package com.test.lw_StopPushing.service;
+package com.lunwei.lw_StopPushing.service;
 
-import com.test.lw_StopPushing.model.User;
+import com.lunwei.lw_StopPushing.model.User;
 
 import java.util.List;
 

@@ -4,7 +4,7 @@ server:
 
 spring:
   datasource:
-    name: zksdb #数据库名称
+    name: lunwei #数据库名称
     type: com.alibaba.druid.pool.DruidDataSource
     #druid相关配置
     druid:
@@ -12,13 +12,13 @@ spring:
       filters: stat
       driver-class-name: com.mysql.cj.jdbc.Driver
       #基本属性
-      url: jdbc:mysql://127.0.0.1:3306/zksdb?serverTimezone=UTC
+      url: jdbc:mysql://127.0.0.1:3306/lunwei?serverTimezone=UTC
       username: root
-      password: 123456
+      password: root
 
 mybatis:
         mapper-locations: classpath:mapper/*.xml
-        type-aliases-package: com.test.lw_StopPushing.model
+        type-aliases-package: com.lunwei.lw_StopPushing.model
 
 logging:
   level:
