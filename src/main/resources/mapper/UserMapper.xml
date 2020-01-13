@@ -77,6 +77,13 @@
     select * from user where name=123
   </select>
 
+  <!--add by zhoukaishun 2020.1.13  11:16-->
+  <select id="getUserByAge"  resultType="com.lunwei.lw_StopPushing.model.User" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from user where age = #{age,jdbcType=INTEGER}
+  </select>
+
 </mapper>
 
 
