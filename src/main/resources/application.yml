@@ -30,8 +30,8 @@ httpclientconfigure: #自定义httpClient配置
   host: 127.0.0.1
   port: 8080
   mapPath: #测试使用，正式环境需要根据具体业务修改
-    interface1: /user/testHttpClient #无参Get
-    interface2: /user/httpclientGetParam #有参Get
-    interface3: /user/doHttpPost #无参Post
-    interface4: /user/doHttpPostParam #有参Post
+    interface1: /user/doGetHaveNoParam #无参Get
+    interface2: /user/doGetHaveParam #有参Get
+    interface3: /user/doPostHaveNoParam #无参Post
+    interface4: /user/doPostHaveParam #有参Post
 

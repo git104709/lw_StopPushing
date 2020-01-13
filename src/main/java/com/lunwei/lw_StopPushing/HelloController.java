@@ -33,26 +33,28 @@ public class HelloController {
         List<User> list = userService.getUserByAge(age);
         return list;
     }
-    @RequestMapping("/testHttpCLient")
-    public String testHttpClient(){
+    @RequestMapping("/doGetHaveNoParam")
+    public String doGetHaveNoParam(){
         return "successful";
     }
 
-    @RequestMapping("/httpclientGetParam")
-    public List<User> httpclientGetParam(String name,Integer age){
+    @RequestMapping("/doGetHaveParam")
+    public List<User> doGetHaveParam(String name,Integer age){
         return getUserByAge(name,age);
     }
 
     @PostMapping
-    @RequestMapping("/doHttpPost")
-    public String doHttpPost(){
+    @RequestMapping("/doPostHaveNoParam")
+    public String doPostHaveNoParam(){
         return "do Post successful";
     }
 
     @PostMapping
-    @RequestMapping("/doHttpPostParam")
+    @RequestMapping("/doPostHaveParam")
     public String doHttpPostParam(@RequestBody User user){
         return "do Post params:name="+user.getName()+",age="+user.getAge();
     }
+
+
 
 }
