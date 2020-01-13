@@ -5,10 +5,7 @@ import com.lunwei.lw_StopPushing.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -44,6 +41,18 @@ public class HelloController {
     @RequestMapping("/httpclientGetParam")
     public List<User> httpclientGetParam(String name,Integer age){
         return getUserByAge(name,age);
+    }
+
+    @PostMapping
+    @RequestMapping("/doHttpPost")
+    public String doHttpPost(){
+        return "do Post successful";
+    }
+
+    @PostMapping
+    @RequestMapping("/doHttpPostParam")
+    public String doHttpPostParam(@RequestBody User user){
+        return "do Post params:name="+user.getName()+",age="+user.getAge();
     }
 
 }
