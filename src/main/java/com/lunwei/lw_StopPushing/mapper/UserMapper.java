@@ -20,4 +20,6 @@ public interface UserMapper {
     List<User> getList();
 
     User list();
+
+    List<User> getUserByAge(Integer age);
 }
