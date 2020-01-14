@@ -22,7 +22,7 @@ mybatis:
 
 logging:
   level:
-    com.test.demo.mapper: DEBUG #包路径为mapper文件包路径
+    com.lunwei.lw_StopPushing.mapper: DEBUG #包路径为mapper文件包路径
 
 
 httpclientconfigure: #自定义httpClient配置

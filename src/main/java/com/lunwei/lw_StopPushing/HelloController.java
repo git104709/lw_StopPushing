@@ -18,7 +18,7 @@ public class HelloController {
     private UserService userService;
 
     @RequestMapping("/list")
-    @Scheduled(cron = "*/5 * * * * ?")
+    //@Scheduled(cron = "*/5 * * * * ?")
     @ResponseBody
     public Object list(){
         User user = userService.list();
