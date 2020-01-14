@@ -11,7 +11,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class lw_StopPushingApplication {
     public static void main(String[] args) {
         SpringApplication.run(lw_StopPushingApplication.class,args);
-
     }
 
 }

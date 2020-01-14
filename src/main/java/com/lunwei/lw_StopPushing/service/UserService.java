@@ -13,4 +13,6 @@ public interface UserService {
     User list();
 
     List<User> getUserByAge(Integer age);
+
+    List<User> getProcedure(Integer id, Integer age);
 }

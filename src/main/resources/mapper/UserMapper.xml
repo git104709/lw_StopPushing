@@ -84,6 +84,11 @@
     from user where age = #{age,jdbcType=INTEGER}
   </select>
 
+  <!--add by zhoukaishun 2020.1.14 15:31-->
+  <select id="getProcedure" parameterType="java.util.Map" resultMap="BaseResultMap" statementType="CALLABLE">
+		{call getByIdAndAge(#{id,mode=IN},#{age,mode=IN})}
+	</select>
+
 </mapper>
 
 

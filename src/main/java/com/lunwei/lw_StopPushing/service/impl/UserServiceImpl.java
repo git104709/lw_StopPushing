@@ -6,7 +6,9 @@ import com.lunwei.lw_StopPushing.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
@@ -33,5 +35,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> getUserByAge(Integer age) {
         return userMapper.getUserByAge(age);
+    }
+
+    @Override
+    public List<User> getProcedure(Integer id, Integer age) {
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("id",id);
+        params.put("age",age);
+        return userMapper.getProcedure(params);
     }
 }

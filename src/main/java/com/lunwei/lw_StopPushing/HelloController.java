@@ -55,6 +55,12 @@ public class HelloController {
         return "do Post params:name="+user.getName()+",age="+user.getAge();
     }
 
+    @GetMapping
+    @RequestMapping("/getProcedure")
+    public List<User> getProcedure(Integer id,Integer age){
+        List<User> list = userService.getProcedure(id,age);
+        return list;
+    }
 
 
 }
