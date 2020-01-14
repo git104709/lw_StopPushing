@@ -1,4 +1,4 @@
-package com.lw_StopPushing;
+package com.lunwei.lw_StopPushing;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
