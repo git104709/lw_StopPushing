@@ -27,6 +27,12 @@ public class HelloController {
     }
 
     @GetMapping
+    @RequestMapping("/hello")
+    public String hello(){
+        return "hello demo";
+    }
+
+    @GetMapping
     @RequestMapping("/getUserByAge")
     public List<User> getUserByAge(String name,Integer age){
         System.out.println("参数name="+name);
