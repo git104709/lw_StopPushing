@@ -41,7 +41,7 @@ public class HelloController {
     }
     @RequestMapping("/doGetHaveNoParam")
     public String doGetHaveNoParam(){
-        return "successful";
+        return "doGetHaveNoParam successful";
     }
 
     @RequestMapping("/doGetHaveParam")
@@ -52,7 +52,7 @@ public class HelloController {
     @PostMapping
     @RequestMapping("/doPostHaveNoParam")
     public String doPostHaveNoParam(){
-        return "do Post successful";
+        return "doPostHaveNoParam successful";
     }
 
     @PostMapping
