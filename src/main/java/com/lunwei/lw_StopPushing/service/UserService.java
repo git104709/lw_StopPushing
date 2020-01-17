@@ -15,4 +15,6 @@ public interface UserService {
     List<User> getUserByAge(Integer age);
 
     List<User> getProcedure(Integer id, Integer age);
+
+    void addUser(User user);
 }

@@ -25,4 +25,6 @@ public interface UserMapper {
     List<User> getUserByAge(Integer age);
 
     List<User> getProcedure(Map<String, Object> params);
+
+    void addUser(User user);
 }

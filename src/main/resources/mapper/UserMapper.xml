@@ -88,6 +88,33 @@
   <select id="getProcedure" parameterType="java.util.Map" resultMap="BaseResultMap" statementType="CALLABLE">
 		{call getByIdAndAge(#{id,mode=IN},#{age,mode=IN})}
 	</select>
+<!--add by zhoukaishun 2020.1.17.15:36-->
+  <insert id="addUser" parameterType="com.lunwei.lw_StopPushing.model.User" >
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="age != null" >
+        age,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+
 
 </mapper>
 

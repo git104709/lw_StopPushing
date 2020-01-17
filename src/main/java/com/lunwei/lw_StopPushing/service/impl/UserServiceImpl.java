@@ -44,4 +44,9 @@ public class UserServiceImpl implements UserService {
         params.put("age",age);
         return userMapper.getProcedure(params);
     }
+
+    @Override
+    public void addUser(User user) {
+        userMapper.addUser(user);
+    }
 }
