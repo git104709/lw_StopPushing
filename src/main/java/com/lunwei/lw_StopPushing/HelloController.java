@@ -5,6 +5,8 @@ import com.lunwei.lw_StopPushing.service.UserService;
 import com.lunwei.lw_StopPushing.utils.ResultVO;
 import com.lunwei.lw_StopPushing.utils.ResultVOUtil;
 import com.lunwei.lw_StopPushing.utils.ValidatorUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -19,6 +21,9 @@ import java.util.List;
 @RequestMapping("/user")
 @Component
 public class HelloController {
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
 
     @Autowired
     private UserService userService;
@@ -50,23 +55,27 @@ public class HelloController {
     }
     @RequestMapping("/doGetHaveNoParam")
     public String doGetHaveNoParam(){
+        logger.info("响应httpClient请求：doGetHaveNoParam");
         return "doGetHaveNoParam successful";
     }
 
     @RequestMapping("/doGetHaveParam")
     public List<User> doGetHaveParam(String name,Integer age){
+        logger.info("响应httpClient请求：doGetHaveParam");
         return getUserByAge(name,age);
     }
 
     @PostMapping
     @RequestMapping("/doPostHaveNoParam")
     public String doPostHaveNoParam(){
+        logger.info("响应httpClient请求：doPostHaveNoParam");
         return "doPostHaveNoParam successful";
     }
 
     @PostMapping
     @RequestMapping("/doPostHaveParam")
     public String doHttpPostParam(@RequestBody User user){
+        logger.info("响应httpClient请求：doPostHaveParam");
         return "do Post params:name="+user.getName()+",age="+user.getAge();
     }
 
